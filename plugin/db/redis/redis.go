@@ -2,6 +2,7 @@ package redis
 
 import (
 	"github.com/ct-llper/go-pkg/utils"
+	"github.com/go-redis/redis/v8"
 	"strconv"
 	"sync"
 )
