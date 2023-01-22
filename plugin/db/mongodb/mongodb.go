@@ -1,6 +1,7 @@
 package mongodb
 
 import (
+	"gopkg.in/mgo.v2"
 	"log"
 )
 
