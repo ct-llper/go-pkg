@@ -11,7 +11,6 @@ import (
 
 // Body 内容
 type Body struct {
-	AppKey string                 `json:"appkey"`
 	Action string                 `json:"action"`
 	Sign   string                 `json:"sign"`
 	Data   map[string]interface{} `json:"data"`
@@ -32,12 +31,7 @@ type ResponseData struct {
 	Data interface{} `json:"data"`
 }
 
-type ListData struct {
-	Total int         `json:"total"`
-	Count int64       `json:"count"`
-	List  interface{} `json:"list"`
-}
-
+// ResponseOkData 成功-带数据
 func ResponseOkData(c *gin.Context, data interface{}) {
 	res := ResponseData{
 		Code: StatusOK,
@@ -49,6 +43,7 @@ func ResponseOkData(c *gin.Context, data interface{}) {
 	c.JSON(http.StatusOK, res)
 }
 
+// ResponseOk 成功-不带数据
 func ResponseOk(c *gin.Context) {
 	res := Response{
 		Code: StatusOK,
@@ -59,6 +54,7 @@ func ResponseOk(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
+// ResponseError 失败返回、失败描述
 func ResponseError(c *gin.Context, err error) {
 	res := Response{
 		Code: StatusErr,

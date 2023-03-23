@@ -1,12 +1,12 @@
 package global
 
 const (
-	StatusOK            = 200
-	StatusErr           = 400
-	StatusLoginAuth     = 401
+	StatusOK            = 200  // 请求成功
+	StatusErr           = 400  // 失败
+	StatusLoginAuth     = 401  // 登录权限
 	StatusAuthErr       = 4001 // 未授权
-	StatusMaxLimit      = 4002
-	StatusSignErr       = 4003
+	StatusMaxLimit      = 4002 // 最大限制
+	StatusSignErr       = 4003 // 签名错误
 	StatusReqParamErr   = 4005 // 请求参数错误
 	StatusParamEmptyErr = 4006 // 请求参数位空
 	StatusAuthIpErr     = 4007 // 白名单
