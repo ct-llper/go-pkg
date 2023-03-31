@@ -49,8 +49,8 @@ func (u *dingTalk) DingTalkText(secret, webhook string, content string, mobileLi
 }
 
 // DingTalkLink 钉钉-链接
-// secret 	SEC10dc2d1914091026ca347e329c34f016e97b1e5190cfcbf14df9b807e02f43b7
-// webhook 	https://oapi.dingtalk.com/robot/send?access_token=25540c1c38c7f9d490e0afb121262491ed62a6a2ce5c34488984e635a65d8a5e
+// secret
+// webhook
 // content := make(map[string]string)
 // content["title"] = "标题"
 // content["text"] = "内容"
