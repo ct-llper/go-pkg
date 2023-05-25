@@ -12,10 +12,10 @@ const (
 )
 
 type Email struct {
-	To       string "to" // 多个用;分开
-	Subject  string "畅通"
-	Msg      string "msg"
-	MailType string "html"
+	To       string `json:"to"`       // 多个用;分开
+	Subject  string `json:"subject"`  // 主题
+	Msg      string `json:"msg"`      // 消息
+	MailType string `json:"mailtype"` // 类型
 }
 
 // SendEmail 发送邮件

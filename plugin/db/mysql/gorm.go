@@ -54,8 +54,8 @@ func (c Connect) Init() {
 				for _, v := range conf {
 					db, err := gorm.Open("mysql", v.(map[string]interface{})["dialect"])
 					if err == nil {
-						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConns"].(int))
-						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConns"].(int))
+						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConnects"].(int))
+						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConnects"].(int))
 						db.DB().SetConnMaxLifetime(v.(map[string]interface{})["ConnMaxLifetime"].(time.Duration))
 						db.SingularTable(true)
 						db.LogMode(true)
@@ -68,8 +68,8 @@ func (c Connect) Init() {
 				for _, v := range conf {
 					db, err := gorm.Open("mysql", v.(map[string]interface{})["dialect"])
 					if err == nil {
-						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConns"].(int))
-						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConns"].(int))
+						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConnects"].(int))
+						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConnects"].(int))
 						db.DB().SetConnMaxLifetime(v.(map[string]interface{})["ConnMaxLifetime"].(time.Duration))
 						db.SingularTable(true)
 						db.LogMode(true)
@@ -186,8 +186,8 @@ func (c Connect) Inits() {
 				for _, v := range confDbs {
 					db, err := gorm.Open("mysql", v.(map[string]interface{})["dialect"])
 					if err == nil {
-						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConns"].(int))
-						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConns"].(int))
+						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConnects"].(int))
+						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConnects"].(int))
 						db.DB().SetConnMaxLifetime(v.(map[string]interface{})["ConnMaxLifetime"].(time.Duration))
 						db.SingularTable(true)
 						db.LogMode(true)
@@ -200,8 +200,8 @@ func (c Connect) Inits() {
 				for _, v := range confDbs {
 					db, err := gorm.Open("mysql", v.(map[string]interface{})["dialect"])
 					if err == nil {
-						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConns"].(int))
-						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConns"].(int))
+						db.DB().SetMaxOpenConns(v.(map[string]interface{})["MaxOpenConnects"].(int))
+						db.DB().SetMaxIdleConns(v.(map[string]interface{})["MaxIdleConnects"].(int))
 						db.DB().SetConnMaxLifetime(v.(map[string]interface{})["ConnMaxLifetime"].(time.Duration))
 						db.SingularTable(true)
 						db.LogMode(true)

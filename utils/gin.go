@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// GinContextToContext gin.context 转换为 context.Contex
+// GinContextToContext gin.context 转换为 context.Context
 func GinContextToContext(ctx *gin.Context) context.Context {
 	return ctx.Request.Context()
 }
@@ -33,7 +33,6 @@ func GinBindJSON(ctx *gin.Context, data interface{}) (err error) {
 
 // GinPostForm gin获取post表单提交数据
 func GinPostForm(ctx *gin.Context, key string) (out string) {
-
 	if ctx.PostForm(key) != "" {
 		return ctx.PostForm(key)
 	}
@@ -42,7 +41,6 @@ func GinPostForm(ctx *gin.Context, key string) (out string) {
 }
 
 func GinUrlPath(ctx *gin.Context) (out string) {
-
 	return ctx.Request.URL.Path
 }
 

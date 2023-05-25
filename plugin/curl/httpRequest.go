@@ -15,16 +15,15 @@ func RequestClient(url, code, contentType string, in []byte) (err error, out str
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
-
 	if err != nil {
 		return err, out
 	}
 
 	defer resp.Body.Close()
 
-	boby, _ := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
-	return err, string(boby)
+	return err, string(body)
 }
 
 func RequestHttpJson(url, method string, in []byte) (err error, out string) {
@@ -44,9 +43,9 @@ func RequestHttpJson(url, method string, in []byte) (err error, out string) {
 		_ = resp.Body.Close()
 	}()
 
-	boby, _ := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
-	return err, string(boby)
+	return err, string(body)
 }
 
 func PostHttpJson(url string, in interface{}) (err error, out string) {
@@ -69,7 +68,7 @@ func PostHttpJson(url string, in interface{}) (err error, out string) {
 
 	defer resp.Body.Close()
 
-	boby, _ := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
-	return err, string(boby)
+	return err, string(body)
 }
