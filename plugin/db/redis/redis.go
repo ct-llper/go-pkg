@@ -19,7 +19,6 @@ type Option struct {
 // Config 初始化配置
 func Config(c map[string]map[string]string) {
 	once.Do(func() {
-		//初始化配置
 		config = c
 	})
 }

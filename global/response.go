@@ -11,24 +11,24 @@ import (
 
 // Body 内容
 type Body struct {
-	Action string                 `json:"action"`
-	Sign   string                 `json:"sign"`
-	Data   map[string]interface{} `json:"data"`
+	Action string                 `json:"action"` // 动作
+	Sign   string                 `json:"sign"`   // 签名
+	Data   map[string]interface{} `json:"data"`   // 数据
 	Source []int                  `json:"source"` // 来源
-	Time   int64                  `json:"time"`
+	Time   int64                  `json:"time"`   // 时间
 }
 
 // Response 返回状态
 type Response struct {
-	Code int64  `json:"code"`
-	Msg  string `json:"msg"`
+	Code int64  `json:"code"` // 状态码
+	Msg  string `json:"msg"`  // 说明
 }
 
 // ResponseData 返回数据
 type ResponseData struct {
-	Code int64       `json:"code"`
-	Msg  string      `json:"msg"`
-	Data interface{} `json:"data"`
+	Code int64       `json:"code"` // 状态码
+	Msg  string      `json:"msg"`  // 说明
+	Data interface{} `json:"data"` // 数据
 }
 
 // ResponseOkData 成功-带数据
