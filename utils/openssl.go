@@ -137,8 +137,8 @@ func Base64Decode(src []byte, baseCode string) ([]byte, error) {
 	return coder.DecodeString(string(src))
 }
 
-// sha1Encode sha1 加密
-func sha1Encode(str string) string {
+// Sha1Encode sha1 加密
+func Sha1Encode(str string) string {
 	// 产生一个散列值得方式是 sha1.New()，sha1.Write(bytes)，然后 sha1.Sum([]byte{})。这里我们从一个新的散列开始。
 	h := sha1.New()
 	// 写入要处理的字节。如果是一个字符串，需要使用[]byte(s) 来强制转换成字节数组。
